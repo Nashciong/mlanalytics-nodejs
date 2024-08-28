@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html dir="ltr">
+     <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      id="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>M. Lhuillier Analytics</title>
+    <link rel="icon" href="/mllogo/mllogo.png" type="image/png">
+    <link rel="stylesheet" href="/css/style.css">
+    <script
+      src="https://oacpractice1-nrcbpbtrtyz0-nt.analytics.ocp.oraclecloud.com/public/dv/v1/embedding/standalone/embedding.js"
+      type="application/javascript"
+    ></script>
+  </head>
+     <style>
+    .container {
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+    }
+  </style>
+  <body style="margin: 0; padding: 0">
+    <div class="container">
+      <oracle-dv
+        project-path="/@Catalog/shared/shared/OACT_TD_IF"
+        active-page="insight"
+        active-tab-id="snapshot!canvas!1"
+        project-options='{"bDisableMobileLayout":false,"bShowFilterBar":false,"showCanvasNavigation":true}'
+      >
+      </oracle-dv>
+    </div>
+    <!--js codes to make the oracle-dv workbook functional-->
+    <script>
+      requirejs(
+        [
+          "knockout",
+          "ojs/ojcore",
+          "ojs/ojknockout",
+          "ojs/ojcomposite",
+          "jet-composites/oracle-dv/loader",
+        ],
+        function (ko) {
+          ko.applyBindings();
+        }
+      );
+    </script>
+  </body>
+</html>
