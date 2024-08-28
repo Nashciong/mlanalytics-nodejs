@@ -264,7 +264,7 @@ fabric.properties
 # End of https://www.toptal.com/developers/gitignore/api/node,vuejs,webstorm
 
 node_modules
-#.gitignore
+.gitignore
 .dockerignore
 package-lock.json
 package.json
