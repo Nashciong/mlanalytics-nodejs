@@ -11,7 +11,7 @@
     <link rel="icon" href="/mllogo/mllogo.png" type="image/png">
     <link rel="stylesheet" href="/css/style.css">
     <script
-      src="https://oacpractice1-nrcbpbtrtyz0-nt.analytics.ocp.oraclecloud.com/public/dv/v1/embedding/standalone/embedding.js"
+      src="https://mlanalytics-nr7audjfcmkp-nt.analytics.ocp.oraclecloud.com/public/dv/v1/embedding/standalone/embedding.js"
       type="application/javascript"
     ></script>
   </head>
@@ -27,28 +27,25 @@
   </style>
   <body style="margin: 0; padding: 0">
     <div class="container">
-      <oracle-dv
+      <!--<oracle-dv
         project-path="/@Catalog/shared/shared/OACT_TD_IF"
         active-page="insight"
         active-tab-id="snapshot!canvas!1"
         project-options='{"bDisableMobileLayout":false,"bShowFilterBar":false,"showCanvasNavigation":true}'
       >
+      </oracle-dv> -->
+      <oracle-dv 
+      project-path="/@Catalog/shared/KYC _Customers/CUSTOMER_DEMOGRAPHICS" 
+      active-page="insight" 
+      active-tab-id="snapshot!canvas!1"
+      project-options='{"bDisableMobileLayout":false,"bShowFilterBar":false,"showCanvasNavigation":true}'>
       </oracle-dv>
     </div>
     <!--js codes to make the oracle-dv workbook functional-->
-    <script>
-      requirejs(
-        [
-          "knockout",
-          "ojs/ojcore",
-          "ojs/ojknockout",
-          "ojs/ojcomposite",
-          "jet-composites/oracle-dv/loader",
-        ],
-        function (ko) {
-          ko.applyBindings();
-        }
-      );
-    </script>
+    <script> 
+      requirejs(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojcomposite', 'jet-composites/oracle-dv/loader'],function(ko) { 
+       ko.applyBindings(); 
+       }); 
+   </script>
   </body>
 </html>
